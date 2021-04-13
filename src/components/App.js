@@ -19,7 +19,17 @@ export default function App() {
 
   // 👉 5- Build a `changeStatus` function that takes an id and
   // changes the `married` from true to false and viceversa
-
+  function changeStatus(id) {
+    setMyFriends(myFriends.map((friend) => {
+      if(friend.id === id) {
+        return {...friend, married: !friend.married}
+      }
+      return friend
+    }))
+    // loop over friends and match based id
+    // if ids match change married
+    // else do nothing
+  }
   // STRETCH - Make a helper function that returns
   // a filtered array of friends data (filtering by search term)
 
@@ -27,9 +37,10 @@ export default function App() {
     <div className='app-friends container'>
       {/* 👉 6- Render the Search component */}
       {/* STRETCH - Changes to the input should update the search term */}
-
+      <Search />
       {/* 👉 7- Render the FriendsList component */}
       {/* What prop/props does FriendsList need? */}
+      <FriendsList />
     </div>
   )
 }
