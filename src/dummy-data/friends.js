@@ -1,6 +1,8 @@
 import { v4 as uuid } from 'uuid'
 
 export const hello = 'world'
+export const ironman = 'Tony Stark'
+export const hulk = 'Bruce Banner'
 
 export default [
   {
