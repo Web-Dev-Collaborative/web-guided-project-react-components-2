@@ -40,7 +40,7 @@ export default function App() {
       <Search />
       {/* 👉 7- Render the FriendsList component */}
       {/* What prop/props does FriendsList need? */}
-      <FriendsList />
+      <FriendsList friendsArray={myFriends} />
     </div>
   )
 }
